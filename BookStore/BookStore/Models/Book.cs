@@ -10,5 +10,7 @@
         public virtual string BookCoverUrl { get; set; }
         public virtual Genre Genre { get; set; }
         public virtual Author Author { get; set; }
+        public virtual string Name { get; set; }
+
     }
 }
