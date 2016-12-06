@@ -85,7 +85,7 @@ namespace BookStore.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "BookId,GenreId,AuthorId,Title,Price,BookCoverUrl")] Book book)
+        public ActionResult Edit([Bind(Include = "BookId, GenreId,AuthorId,Title,Price,BookCoverUrl, Author")] Book book)
         {
             if (ModelState.IsValid)
             {
@@ -93,8 +93,8 @@ namespace BookStore.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
-            ViewBag.AuthorId = new SelectList(db.Authors, "AuthorId", "Name", book.AuthorId);
-            ViewBag.GenreId = new SelectList(db.Genres, "GenreId", "Name", book.GenreId);
+            ViewBag.AuthorId = new SelectList(db.Genres, "GenreId", "Name", book.GenreId);
+            ViewBag.GenreId = new SelectList(db.Authors, "AuthorId", "Name", book.AuthorId);
             return View(book);
         }
 
