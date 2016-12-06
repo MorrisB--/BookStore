@@ -65,7 +65,7 @@ namespace BookStore.Models
                 new Author { Name = "Susan Mallery" },
             };
 
-            new List<Book>
+            new List <Book>
             {
                 new Book { Title = "Seveneves", Genre = genres.Single(g => g.Name == "Science Fiction"), Price = 10.80M, Author = authors.Single(a => a.Name == "Neal Stephenson"), BookCoverUrl = "/Content/Images/BookCovers/ScienceFiction/Seveneves.jpg" },
                 new Book { Title = "The Children of Hurin", Genre = genres.Single(g => g.Name == "Science Fiction"), Price = 8.99M, Author = authors.Single(a => a.Name == "J.R.R. Tolkien"), BookCoverUrl = "/Content/Images/BookCovers/ScienceFiction/TheChildrenOfHurin.jpg" },

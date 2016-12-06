@@ -1,4 +1,4 @@
-﻿@model MVCMusicStore_Team3.Models.Album
+﻿@model BookStore.Models.Book
 
 @{
     ViewBag.Title = "Details";
@@ -7,15 +7,15 @@
 <h2>Details</h2>
 
 <div>
-    <h4>Album</h4>
+    <h4>Book</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.Artist.Name)
+            @Html.DisplayNameFor(model => model.Author.Name)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.Artist.Name)
+            @Html.DisplayFor(model => model.Author.Name)
         </dd>
 
         <dt>
@@ -43,16 +43,16 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.AlbumArtUrl)
+            @Html.DisplayNameFor(model => model.BookCoverUrl)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.AlbumArtUrl)
+            @Html.DisplayFor(model => model.BookCoverUrl)
         </dd>
 
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.AlbumId }) |
+    @Html.ActionLink("Edit", "Edit", new { id = Model.BookId }) |
     @Html.ActionLink("Back to List", "Index")
 </p>
