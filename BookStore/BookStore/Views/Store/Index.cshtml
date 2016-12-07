@@ -1,6 +1,6 @@
 ﻿@model IEnumerable<BookStore.Models.Genre>
 
-@{
+@{ 
     ViewBag.Title = "Store";
 }
 <br />
@@ -12,11 +12,22 @@
     Select from @Model.Count() genres:
 </p>
 <ul>
-    @foreach(var genre in Model)
-    {
+    @{int i = 0;}
+
+    @foreach (var genre in Model) {
+        
+        if (i == 0) {
         <li>@Html.ActionLink(@genre.Name, "ScienceFiction", "Store")</li>
-        <li>@Html.ActionLink(@genre.Name, "Poetry", "Store")</li>
-        <li>@Html.ActionLink(@genre.Name, "Romance", "Store")</li>
-       
+        }
+
+        if (i == 1) {
+            <li>@Html.ActionLink(@genre.Name, "Poetry", "Store")</li>
+
+        }
+
+        if (i == 2) {
+            <li>@Html.ActionLink(@genre.Name, "Romance", "Store")</li>
+        }
+        i++;
     }
 </ul>

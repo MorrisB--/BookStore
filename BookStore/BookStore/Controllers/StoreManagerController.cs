@@ -10,6 +10,7 @@ using BookStore.Models;
 
 namespace BookStore.Controllers
 {
+    [Authorize(Roles = "Administrator")]
     public class StoreManagerController : Controller
     {
         private BookStoreEntities db = new BookStoreEntities();
