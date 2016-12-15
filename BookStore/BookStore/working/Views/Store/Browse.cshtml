@@ -1,0 +1,16 @@
+﻿@model BookStore.Models.Genre
+
+@{
+    ViewBag.Title = "Browse";
+}
+
+<h2>Browsing Genre: @Model.Name</h2>
+<ul>
+    @foreach (var Book in Model.Book)
+    {
+        <li>
+            <!-- below p. 52, can now browse from the store page to the genres page-->
+            @Html.ActionLink(Book.Title, "Details", new { id = Book.BookId })
+        </li>
+    }
+</ul>

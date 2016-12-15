@@ -1,0 +1,22 @@
+﻿
+@model IEnumerable<BookStore.Models.Book>
+
+@{
+    ViewBag.Title = "ScienceFiction";
+}
+<br />
+<br />
+<br />
+<br />
+<h3>Browse Science Fiction</h3>
+<p>
+    Select from @Model.Count() book:
+</p>
+<ul>
+    @foreach (var book in Model)
+    {
+        if(Genre = genres.Single(g => g.Name == "Science Fiction"))
+        { <li>@Html.ActionLink(@Book.Title) </li>}
+     
+    }
+</ul>

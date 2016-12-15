@@ -13,7 +13,7 @@ namespace BookStore
             createRolesandUsers();
         }
         private void createRolesandUsers() {
-
+            /*
             System.Diagnostics.Debug.WriteLine("Entered");
             ApplicationDbContext context = new ApplicationDbContext();
 
@@ -40,7 +40,7 @@ namespace BookStore
                 var chkUser = UserManager.Create(user, userPWD);
 
                 //Add default User to Role Admin   
-                    var result1 = UserManager.AddToRole(user.Id, "Administrator");
+                  //  var result1 = UserManager.AddToRole(user.Id, "Administrator");*/
 
             
         }
