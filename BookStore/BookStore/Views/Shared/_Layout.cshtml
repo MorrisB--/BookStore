@@ -4,9 +4,11 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>@ViewBag.Title - <center>TMZ BOOKSOTRE</center></title>
-    @Styles.Render("~/Content/css")
+    <title>@ViewBag.Title TMZ BOOKSOTRE</title>
+	    @Styles.Render("~/Content/css")
     @Scripts.Render("~/bundles/modernizr")
+    <link href="~/Content/Site.css" rel="stylesheet" type="'text/css" />
+    <script src="~/scripts/modernizr-2.6.2.js"></script>
 
     <script src="~/scripts/jquery-1.10.2.min.js"></script>
 
@@ -28,8 +30,14 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("Store", "Store", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
                     <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @if (Request.IsAuthenticated)
+                    {
+                        <li>@Html.ActionLink("Store", "Index", "Store")</li>
+                        <li>@Html.ActionLink("Store Manager", "Index", "StoreManager")</li>
+
+                    }
                 </ul>
                 @Html.Partial("_LoginPartial")
             </div>
@@ -39,7 +47,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - TMZ BOOKSTORE</p>
+            <p><center>&copy; @DateTime.Now.Year - TMZ BOOKSTORE-Support@tmz.com</center></p>
         </footer>
     </div>
 

@@ -5,13 +5,16 @@
 }
 
 <div class="genre"> 
+    <br />
+    <br />
+    <br />
     <h3><em>@Model.Name</em> Books</h3> 
     <ul id="book-list">
      @foreach (var book in Model.Books)
 {
     <li> 
         <a href="@Url.Action("Details", new { id = book.BookId })"> 
-        <img alt="@book.Title" src="@book.BookCoverUrl" /> 
+        <img alt="@book.Title" src="@book.BookCoverUrl" style="height="150px"; width="200px"; float:left; margin-left:150px;" /> 
         <span>@book.Title</span> 
         </a> 
         </li>
